@@ -12,5 +12,6 @@ public interface ProjectTaskMapper {
     ProjectTaskDto from(ProjectTask projectTask);
     @Mapping(target = "id",ignore = true)
     @Mapping(target = "backlog",ignore = true)
+    @Mapping(target = "projectIdentifier",ignore = true)
     ProjectTask to(ProjectTaskDto projectTaskDto);
 }

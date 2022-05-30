@@ -36,6 +36,6 @@ public class ProjectTaskDto {
     private Double hours;
     private Date starDate;
     private Date endDate;
-    private String projectIdentifier;
+    //private String projectIdentifier;
     private Long backlogId;
 }

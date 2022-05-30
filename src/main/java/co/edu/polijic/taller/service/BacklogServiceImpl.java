@@ -28,6 +28,7 @@ public class BacklogServiceImpl implements BacklogService{
     public Backlog save(BacklogDto backlogDto) {
         Backlog backlog = backlogMapper.to(backlogDto);
         backlog.setProject(projectRepository.getById(backlogDto.getProjectId()));
+        backlog.setProjectIdentifier(projectRepository.getById(backlogDto.getProjectId()).getProjectIdentifier());
         return backlogRepository.save(backlog);
     }
 

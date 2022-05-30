@@ -30,6 +30,7 @@ public class ProjectTaskServiceImpl implements ProjectTaskService{
     @Override
     public ProjectTask save(ProjectTaskDto projectTaskDto) {
         ProjectTask projectTask = projectTaskMapper.to(projectTaskDto);
+        projectTask.setProjectIdentifier(backlogRepository.getById(projectTaskDto.getBacklogId()).getProjectIdentifier());
         projectTask.setBacklog(backlogRepository.getById(projectTaskDto.getBacklogId()));
         return projectTaskRepository.save(projectTask);
     }

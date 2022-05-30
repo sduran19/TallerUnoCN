@@ -13,5 +13,6 @@ public interface BacklogMapper {
     @Mapping(target = "id",ignore = true)
     @Mapping(target = "project",ignore = true)
     @Mapping(target = "projectTasks",ignore = true)
+    @Mapping(target = "projectIdentifier",ignore = true)
     Backlog to(BacklogDto backlogDto);
 }

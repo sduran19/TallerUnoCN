@@ -13,7 +13,10 @@ import javax.validation.constraints.NotEmpty;
 @ToString
 @Data
 public class BacklogDto {
-    @NotEmpty(message = "No puede estar en blanco")
-    private String projectIdentifier;
+    //@NotEmpty(message = "No puede estar en blanco")
+    //private String projectIdentifier;
     private Long projectId;
+
+    public BacklogDto() {
+    }
 }
