@@ -13,3 +13,8 @@ spring:
     defer-datasource-initialization: true
     hibernate:
       ddl-auto: create-drop
+
+server:
+  servlet:
+    context-path: /v1
+  port: 9050
