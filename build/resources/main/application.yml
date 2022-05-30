@@ -12,6 +12,7 @@ spring:
     hibernate:
       ddl-auto: none
     generate-ddl: true
+    ddl-auto: create-drop
 
 
   #datasource:
