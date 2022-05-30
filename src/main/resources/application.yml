@@ -33,4 +33,4 @@ spring:
 server:
   servlet:
     context-path: /v1
-  port: 8080
+  port: ${PORT:80}
