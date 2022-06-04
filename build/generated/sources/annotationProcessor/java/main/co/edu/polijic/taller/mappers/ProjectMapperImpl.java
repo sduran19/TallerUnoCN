@@ -3,12 +3,13 @@ package co.edu.polijic.taller.mappers;
 import co.edu.polijic.taller.model.dto.ProjectDto;
 import co.edu.polijic.taller.model.dto.ProjectDto.ProjectDtoBuilder;
 import co.edu.polijic.taller.model.entity.Project;
+import co.edu.polijic.taller.model.entity.Project.ProjectBuilder;
 import javax.annotation.Generated;
 import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2022-05-30T14:08:10-0500",
+    date = "2022-06-04T10:52:18-0500",
     comments = "version: 1.3.1.Final, compiler: javac, environment: Java 1.8.0_261 (Oracle Corporation)"
 )
 @Component
@@ -37,14 +38,14 @@ public class ProjectMapperImpl implements ProjectMapper {
             return null;
         }
 
-        Project project = new Project();
+        ProjectBuilder project = Project.builder();
 
-        project.setProjectName( projectDto.getProjectName() );
-        project.setProjectIdentifier( projectDto.getProjectIdentifier() );
-        project.setDescription( projectDto.getDescription() );
-        project.setStartDate( projectDto.getStartDate() );
-        project.setEndDate( projectDto.getEndDate() );
+        project.projectName( projectDto.getProjectName() );
+        project.projectIdentifier( projectDto.getProjectIdentifier() );
+        project.description( projectDto.getDescription() );
+        project.startDate( projectDto.getStartDate() );
+        project.endDate( projectDto.getEndDate() );
 
-        return project;
+        return project.build();
     }
 }
