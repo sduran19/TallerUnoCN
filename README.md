@@ -5,4 +5,4 @@ Proyecto de Spring Boot
 
 Base de datos en memoria H2
 
-Ruta de documentacion de los endpoints http://localhost:8080/swagger-ui/index.html
+Ruta de documentacion de los endpoints (http://localhost/v1/swagger-ui/index.html)
